@@ -111,5 +111,4 @@ SSH in and start building.
 
 docker exec -it moof-python-three-dot-eight-alpine sh
 
-
 ```
