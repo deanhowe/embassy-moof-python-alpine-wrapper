@@ -26,7 +26,7 @@ lan-address:
   description: The LAN address for the network interface. 
   type: pointer
   subtype: package
-  package-id: moof-pi-hole
+  package-id: moof-python-alpine
   target: lan-address
   interface: main
 
@@ -35,6 +35,6 @@ dns-address:
   description: The LAN/DNS address for the network interface. 
   type: pointer
   subtype: package
-  package-id: moof-pi-hole
+  package-id: moof-python-alpine
   target: lan-address
   interface: dns

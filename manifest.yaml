@@ -1,14 +1,14 @@
-id: moof-python-three-dot-seven-alpine
-version: 3.7.13-0
-title: "Alpine Linux with Python 3.7.13"
+id: moof-python-alpine
+version: 3.9.2-0
+title: "Alpine Linux with Python 3.9.12"
 description:
-  short: "Alpine Linux with Python 3.7.13"
-  long: "Alpine Linux with Python 3.7.13"
+  short: "Alpine Linux with Python 3.9.12"
+  long: "Alpine Linux with Python 3.9.12"
 release-notes: | 
   - ALPHA release.
 license: MIT
-wrapper-repo: https://github.com/deanhowe/embassy-moof-python-alpine-wrapper/tree/3.15/3.7.13
-upstream-repo: https://hub.docker.com/layers/python/library/python/3.7.13-alpine3.15/images/sha256-634f06af32afe9926177560feebd9f2ae14aa9a70e1d3cc0a124495a5d7168ae
+wrapper-repo: https://github.com/deanhowe/embassy-moof-python-alpine-wrapper/
+upstream-repo: https://hub.docker.com/layers/python/library/python/3.9.12-alpine3.15/
 # URL to the support site / channel for the project. This key can be omitted if none exists, or it can link to the original project repository issues.
 support-site: "https://t.me/joinchat/Fb4OcRo4LrRD6NXfsNdeeQ"
 # URL to the marketing site for the project. This key can be omitted if none exists, or it can link to the original project repository. 
@@ -64,7 +64,7 @@ config:
     args:
       - config
       - set
-      - "moof-python-three-dot-seven-alpine"
+      - "moof-python-alpine"
       - /datadir
       - "/mnt/assets/config_rules.yaml"
       - "/mnt/assets/dependencies.yaml"
@@ -87,7 +87,7 @@ backup:
     entrypoint: compat # command to run the backup executable, in this case, duplicity
     args: # arguments to pass into the entrypoint, in this case duplicity - in this example, the full command run will be: `duplicity hello-world file:///mnt/backup /root`
       - duplicity
-      - moof-python-three-dot-seven-alpine
+      - moof-python-alpine
       - /mnt/backup
       - /root
     mounts:
@@ -102,7 +102,7 @@ backup:
     entrypoint: compat
     args:
       - duplicity
-      - moof-python-three-dot-seven-alpinee
+      - moof-python-alpinee
       - /root
       - /mnt/backup
     mounts:

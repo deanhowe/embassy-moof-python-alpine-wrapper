@@ -1,4 +1,4 @@
-# Alpine Linux 3.5 with Python 3.7.13 on Embassy OS
+# Alpine Linux 3.5 with Python 3.8.13 on Embassy OS
 
 ![Alpine Linux with Python Logo](./icon.png)
 
@@ -95,13 +95,13 @@ However you might want to change a few of the configs first - it is your build a
 ## Installing (on Embassy)
 
 SSH into an Embassy device.
-`scp` the `moof-python-three-dot-seven-alpine.s9pk` to any directory from your local machine.
+`scp` the `moof-python-alpine.s9pk` to any directory from your local machine.
 Run the following commands to determine successful install:
 
 ```
 
 embassy-cli auth login
-embassy-cli package install moof-python-three-dot-seven-alpine.s9pk
+embassy-cli package install moof-python-alpine.s9pk
 
 ```
 
@@ -109,7 +109,6 @@ SSH in and start building.
 
 ```
 
-docker exec -it moof-python-three-dot-seven-alpine sh
-
+docker exec -it moof-python-alpine sh
 
 ```

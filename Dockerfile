@@ -1,4 +1,4 @@
-FROM python:3.7.13-alpine3.15 as builder
+FROM python:3.9.12-alpine3.15 as builder
 
 # INSTALL jq - for editing JSON 
 RUN apk update && apk add --no-cache jq python3 python3-dev gcc g++ openssl musl-dev linux-headers libffi-dev postgresql-dev
