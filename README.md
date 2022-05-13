@@ -104,3 +104,12 @@ embassy-cli auth login
 embassy-cli package install moof-python-three-dot-seven-alpine.s9pk
 
 ```
+
+SSH in and start building.
+
+```
+
+docker exec -it moof-python-three-dot-seven-alpine sh
+
+
+```
