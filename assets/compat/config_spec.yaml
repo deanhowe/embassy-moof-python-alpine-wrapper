@@ -1,0 +1,40 @@
+# To utilize the default config system built in the compat system image, this file is required. It defines the *structure* of the configuration file. These structured options display as changeable UI elements within the "Config" section of the service details page in the Embassy UI.
+
+# Example:
+# tor-address:
+#   name: Network Tor Address
+#   description: The Tor address for the network interface. 
+#   type: pointer
+#   subtype: package
+#   package-id: hello-world
+#   target: tor-address
+#   interface: main
+
+my-first-config:
+  type: string
+  name: "My first config!"
+  description: "Your first config!"
+  nullable: false
+  pattern: '^[^\n:]+$'
+  pattern-description: May not contain newline or ":"
+  copyable: true
+  masked: false
+  default: "Testing"
+  
+lan-address:
+  name: Network LAN Address
+  description: The LAN address for the network interface. 
+  type: pointer
+  subtype: package
+  package-id: moof-python-three-dot-eight-alpine
+  target: lan-address
+  interface: main
+
+dns-address:
+  name: Network LAN/DNS Address
+  description: The LAN/DNS address for the network interface. 
+  type: pointer
+  subtype: package
+  package-id: moof-python-three-dot-eight-alpine
+  target: lan-address
+  interface: dns
